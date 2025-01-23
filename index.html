@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Contato</title>
+    <style>
+        /* Define estilos gerais para o corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+        /* Estilos para o container do formulário */
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 600px;
+            margin-bottom: 20px;
+        }
+        /* Estilo para o título do formulário */
+        .form-container h2 {
+            margin-top: 0;
+        }
+        /* Estilos para os grupos de formulários */
+        .form-group {
+            margin-bottom: 15px;
+        }
+        /* Estilos para os rótulos dos campos do formulário */
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        /* Estilos para os campos de entrada de texto, email, telefone e textarea */
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        /* Estilo para impedir o redimensionamento das textareas */
+        .form-group textarea {
+            resize: none;
+        }
+        /* Estilos para o botão de envio */
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        /* Mudança de cor do botão quando o mouse está sobre ele */
+        .form-group button:hover {
+            background-color: #45a049;
+        }
+        /* Estilos para a tabela de horários */
+        .tabela-horarios {
+            width: 600px;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        /* Estilos para as bordas e alinhamento da tabela e células */
+        .tabela-horarios, .tabela-horarios th, .tabela-horarios td {
+            border: 1px solid #ccc;
+            text-align: center;
+            padding: 8px;
+        }
+        /* Estilos para a tarja de crédito */
+        .tarja {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Formulário de Contato</h2>
+        <form>
+            <!-- Campo para Nome e Sobrenome -->
+            <div class="form-group">
+                <label for="nome">Nome e Sobrenome</label>
+                <input type="text" id="nome" name="nome">
+            </div>
+            <!-- Campo para E-mail -->
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <!-- Campo para Telefone -->
+            <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" name="telefone">
+            </div>
+            <!-- Campo para Mensagem -->
+            <div class="form-group">
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+            </div>
+            <!-- Campo para a preferência de contato com opções -->
+            <div class="form-group">
+                <label for="contato">Como prefere o contato?</label>
+                <select id="contato" name="contato">
+                    <option value="email">E-mail</option>
+                    <option value="telefone">Telefone</option>
+                    <option value="whatsapp">Whatsapp</option>
+                </select>
+            </div>
+            <!-- Campo para o horário preferido de atendimento -->
+            <div class="form-group">
+                <label for="horario">Qual horário prefere ser atendido?</label>
+                <input type="text" id="horario" name="horario">
+            </div>
+            <!-- Checkbox para receber novidades por e-mail -->
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" id="novidades" name="novidades">
+                    Gostaria de receber nossas novidades por e-mail?
+                </label>
+            </div>
+            <!-- Botão de envio do formulário -->
+            <div class="form-group">
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+    <!-- Tabela de horários com dias da semana e horários de atendimento -->
+    <table class="tabela-horarios">
+        <tr>
+            <th>Dia</th>
+            <th>Horário</th>
+        </tr>
+        <tr>
+            <td>Segunda-feira</td>
+            <td>08h às 20h</td>
+        </tr>
+        <tr>
+            <td>Terça-feira</td>
+            <td>08h às 20h</td>
+        </tr>
+        <tr>
+            <td>Quarta-feira</td>
+            <td>08h às 20h</td>
+        </tr>
+        <tr>
+            <td>Quinta-feira</td>
+            <td>08h às 20h</td>
+        </tr>
+        <tr>
+            <td>Sexta-feira</td>
+            <td>08h às 20h</td>
+        </tr>
+    </table>
+    <!-- Tarja com informações de crédito -->
+    <div class="tarja">
+        Desenvolvido por Igor Lima M. França - SP3138127
+    </div>
+</body>
+</html>
