@@ -1,41 +1,64 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário com Validação</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Respostas CSS Diner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #d1d1d1;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #2400f0;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <form id="meuFormulario">
-        <div class="form-group">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
-        </div>
-
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-
-        <div class="form-group">
-            <label for="cpf">CPF:</label>
-            <input type="text" id="cpf" name="cpf" maxlength="14" required>
-        </div>
-
-        <div class="form-group">
-            <label for="telefone">Telefone:</label>
-            <input type="text" id="telefone" name="telefone" maxlength="15" required>
-        </div>
-
-        <div class="form-group">
-            <label for="dataNascimento">Data de Nascimento:</label>
-            <input type="date" id="dataNascimento" name="dataNascimento" required>
-        </div>
-
-        <button type="submit">Enviar</button>
-    </form>
-
-    <script src="script.js"></script>
+    <h1>Respostas dos Exercícios do CSS Diner</h1>
+    <table>
+        <tr>
+            <th>Exercício</th>
+            <th>Seletores CSS</th>
+        </tr>
+        <tr><td>1</td><td>plate</td></tr>
+        <tr><td>2</td><td>bento</td></tr>
+        <tr><td>3</td><td>#fancy</td></tr>
+        <tr><td>4</td><td>plate apple</td></tr>
+        <tr><td>5</td><td>#fancy pickle</td></tr>
+        <tr><td>6</td><td>.small</td></tr>
+        <tr><td>7</td><td>orange.small</td></tr>
+        <tr><td>8</td><td>bento orange.small</td></tr>
+        <tr><td>9</td><td>plate,bento</td></tr>
+        <tr><td>10</td><td>*</td></tr>
+        <tr><td>11</td><td>plate *</td></tr>
+        <tr><td>12</td><td>plate + apple</td></tr>
+        <tr><td>13</td><td>bento ~ pickle</td></tr>
+        <tr><td>14</td><td>plate > apple</td></tr>
+        <tr><td>15</td><td>orange:first-child</td></tr>
+        <tr><td>16</td><td>plate:nth-child(3)</td></tr>
+        <tr><td>17</td><td>bento:nth-last-child(3)</td></tr>
+        <tr><td>18</td><td>:only-child</td></tr>
+        <tr><td>19</td><td>:nth-of-type(even)</td></tr>
+        <tr><td>20</td><td>apple:only-of-type</td></tr>
+        <tr><td>21</td><td>orange:last-of-type</td></tr>
+        <tr><td>22</td><td>bento:empty</td></tr>
+        <tr><td>23</td><td>apple:not(.small)</td></tr>
+        <tr><td>24</td><td>[for]</td></tr>
+        <tr><td>25</td><td>plate[for="Vitaly"]</td></tr>
+        <tr><td>26</td><td>[for^="Sa"]</td></tr>
+    </table>
 </body>
 </html>
