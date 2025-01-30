@@ -1,64 +1,111 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Respostas CSS Diner</title>
+    <title>Exemplos de Flexbox e Grid</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #d1d1d1;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background: white;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: #2400f0;
-            color: white;
-        }
+        .ex1 { justify-content: flex-end; }
+        .ex2 { justify-content: center; }
+        .ex3 { justify-content: space-around; }
+        .ex4 { justify-content: space-between; }
+        .ex5 { align-items: flex-end; }
+        .ex6 { justify-content: center; align-items: center; }
+        .ex7 { justify-content: space-around; align-items: flex-end; }
+        .ex8 { flex-direction: row-reverse; }
+        .ex9 { flex-direction: column; }
+        .ex10 { flex-direction: row-reverse; justify-content: flex-end; }
+        .ex11 { flex-direction: column; justify-content: flex-end; }
+        .ex12 { flex-direction: column-reverse; justify-content: space-between; }
+        .ex13 { flex-direction: row-reverse; justify-content: center; align-items: flex-end; }
+        .ex14 { order: -2; }
+        .ex15 { order: -2; }
+        .ex16 { order: 2; align-self: flex-end; }
+        .ex17 { flex-wrap: wrap; }
+        .ex18 { flex-direction: column; flex-wrap: wrap; }
+        .ex19 { flex-flow: column wrap; }
+        .ex20 { flex-flow: wrap column; }
+        .ex21 { align-content: flex-start; }
+        .ex22 { align-content: flex-end; }
+        .ex23 { flex-direction: column-reverse; align-content: center; }
+        .ex24 { flex-flow: column-reverse wrap-reverse; justify-content: center; align-content: space-between; }
+
+        .level1 { grid-column-start: 3; }
+        .level2 { grid-column-start: 5; }
+        .level3 { grid-colunn-end: 4; }
+        .level4 { grid-column-end: 2; }
+        .level5 { grid-column-end: -2; }
+        .level6 { grid-column-start: -3; }
+        .level7 { grid-column-end: span 2; }
+        .level8 { grid-column-end: span 5; }
+        .level9 { grid-column-start: span 3; }
+        .level10 { grid-column: 4 / 6; }
+        .level11 { grid-column: 2 / 5; }
+        .level12 { grid-row-start: 3; }
+        .level13 { grid-row: 3 / 6; }
+        .level14 { grid-column: 2 / 3; grid-row: 5 / 6; }
+        .level15 { grid-column: 2 / 6; grid-row: 1 / 6; }
+        .level16 { grid-area: 1 / 2 / 4 / 6; }
+        .level17 { grid-area: 2 / 3 / 5 / 6; }
+        .level18 { order: 5; }
+        .level19 { order: -1; }
+        .level20 { grid-template-columns: 50% 10% 25% 5% 10%; }
+        .level21 { grid-template-columns: repeat(8, 12.5%); }
+        .level22 { grid-template-columns: 100px 3em 40%; }
+        .level23 { grid-template-columns: 1fr 5fr; }
+        .level24 { grid-template-columns: 50px 1fr 1fr 1fr 50px; }
+        .level25 { grid-template-columns: 75px 3fr 2fr; }
+        .level26 { grid-template-rows: repeat(4, 12.5px) 1fr; }
     </style>
 </head>
 <body>
-    <h1>Respostas dos Exercícios do CSS Diner</h1>
-    <table>
-        <tr>
-            <th>Exercício</th>
-            <th>Seletores CSS</th>
-        </tr>
-        <tr><td>1</td><td>plate</td></tr>
-        <tr><td>2</td><td>bento</td></tr>
-        <tr><td>3</td><td>#fancy</td></tr>
-        <tr><td>4</td><td>plate apple</td></tr>
-        <tr><td>5</td><td>#fancy pickle</td></tr>
-        <tr><td>6</td><td>.small</td></tr>
-        <tr><td>7</td><td>orange.small</td></tr>
-        <tr><td>8</td><td>bento orange.small</td></tr>
-        <tr><td>9</td><td>plate,bento</td></tr>
-        <tr><td>10</td><td>*</td></tr>
-        <tr><td>11</td><td>plate *</td></tr>
-        <tr><td>12</td><td>plate + apple</td></tr>
-        <tr><td>13</td><td>bento ~ pickle</td></tr>
-        <tr><td>14</td><td>plate > apple</td></tr>
-        <tr><td>15</td><td>orange:first-child</td></tr>
-        <tr><td>16</td><td>plate:nth-child(3)</td></tr>
-        <tr><td>17</td><td>bento:nth-last-child(3)</td></tr>
-        <tr><td>18</td><td>:only-child</td></tr>
-        <tr><td>19</td><td>:nth-of-type(even)</td></tr>
-        <tr><td>20</td><td>apple:only-of-type</td></tr>
-        <tr><td>21</td><td>orange:last-of-type</td></tr>
-        <tr><td>22</td><td>bento:empty</td></tr>
-        <tr><td>23</td><td>apple:not(.small)</td></tr>
-        <tr><td>24</td><td>[for]</td></tr>
-        <tr><td>25</td><td>plate[for="Vitaly"]</td></tr>
-        <tr><td>26</td><td>[for^="Sa"]</td></tr>
-    </table>
-</body>
-</html>
+    <h1>Exemplos de Flexbox</h1>
+    <div class="ex1">Ex1: justify-content: flex-end;</div>
+    <div class="ex2">Ex2: justify-content: center;</div>
+    <div class="ex3">Ex3: justify-content: space-around;</div>
+    <div class="ex4">Ex4: justify-content: space-between;</div>
+    <div class="ex5">Ex5: align-items: flex-end;</div>
+    <div class="ex6">Ex6: justify-content: center; align-items: center;</div>
+    <div class="ex7">Ex7: justify-content: space-around; align-items: flex-end;</div>
+    <div class="ex8">Ex8: flex-direction: row-reverse;</div>
+    <div class="ex9">Ex9: flex-direction: column;</div>
+    <div class="ex10">Ex10: flex-direction: row-reverse; justify-content: flex-end;</div>
+    <div class="ex11">Ex11: flex-direction: column; justify-content: flex-end;</div>
+    <div class="ex12">Ex12: flex-direction: column-reverse; justify-content: space-between;</div>
+    <div class="ex13">Ex13: flex-direction: row-reverse; justify-content: center; align-items: flex-end;</div>
+    <div class="ex14">Ex14: order: -2;</div>
+    <div class="ex15">Ex15: order: -2;</div>
+    <div class="ex16">Ex16: order: 2; align-self: flex-end;</div>
+    <div class="ex17">Ex17: flex-wrap: wrap;</div>
+    <div class="ex18">Ex18: flex-direction: column; flex-wrap: wrap;</div>
+    <div class="ex19">Ex19: flex-flow: column wrap;</div>
+    <div class="ex20">Ex20: flex-flow: wrap column;</div>
+    <div class="ex21">Ex21: align-content: flex-start;</div>
+    <div class="ex22">Ex22: align-content: flex-end;</div>
+    <div class="ex23">Ex23: flex-direction: column-reverse; align-content: center;</div>
+    <div class="ex24">Ex24: flex-flow: column-reverse wrap-reverse; justify-content: center; align-content: space-between;</div>
+
+    <h1>Exemplos de Grid CSS</h1>
+    <h2 class="level1">Level 1: grid-column-start: 3;</h2>
+    <h2 class="level2">Level 2: grid-column-start: 5;</h2>
+    <h2 class="level3">Level 3: grid-colunn-end: 4;</h2>
+    <h2 class="level4">Level 4: grid-column-end: 2;</h2>
+    <h2 class="level5">Level 5: grid-column-end: -2;</h2>
+    <h2 class="level6">Level 6: grid-column-start: -3;</h2>
+    <h2 class="level7">Level 7: grid-column-end: span 2;</h2>
+    <h2 class="level8">Level 8: grid-column-end: span 5;</h2>
+    <h2 class="level9">Level 9: grid-column-start: span 3;</h2>
+    <h2 class="level10">Level 10: grid-column: 4 / 6;</h2>
+    <h2 class="level11">Level 11: grid-column: 2 / 5;</h2>
+    <h2 class="level12">Level 12: grid-row-start: 3;</h2>
+    <h2 class="level13">Level 13: grid-row: 3 / 6;</h2>
+    <h2 class="level14">Level 14: grid-column: 2 / 3; grid-row: 5 / 6;</h2>
+    <h2 class="level15">Level 15: grid-column: 2 / 6; grid-row: 1 / 6;</h2>
+    <h2 class="level16">Level 16: grid-area: 1 / 2 / 4 / 6;</h2>
+    <h2 class="level17">Level 17: grid-area: 2 / 3 / 5 / 6;</h2>
+    <h2 class="level18">Level 18: order: 5;</h2>
+    <h2 class="level19">Level 19: order: -1;</h2>
+    <h2 class="level20">Level 20: grid-template-columns: 50% 10% 25% 5% 10%;</h2>
+    <h2 class="level21">Level 21: grid-template-columns: repeat(8, 12.5%);</h2>
+    <h2 class="level22">Level 22: grid-template-columns: 100px 3em 40%;</h2>
+    <h2 class="level23">Level 23: grid-template-columns: 1fr 5fr
